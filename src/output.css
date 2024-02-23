@@ -1263,16 +1263,16 @@ video {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1412,14 +1412,6 @@ video {
     top: -4rem;
   }
 
-  .sm\:-bottom-14 {
-    bottom: -3.5rem;
-  }
-
-  .sm\:h-\[100px\] {
-    height: 100px;
-  }
-
   .sm\:h-\[277px\] {
     height: 277px;
   }
@@ -1428,20 +1420,8 @@ video {
     height: 28px;
   }
 
-  .sm\:h-\[50px\] {
-    height: 50px;
-  }
-
-  .sm\:h-\[80px\] {
-    height: 80px;
-  }
-
   .sm\:h-\[90px\] {
     height: 90px;
-  }
-
-  .sm\:w-\[100px\] {
-    width: 100px;
   }
 
   .sm\:w-\[277px\] {
@@ -1450,14 +1430,6 @@ video {
 
   .sm\:w-\[28px\] {
     width: 28px;
-  }
-
-  .sm\:w-\[50px\] {
-    width: 50px;
-  }
-
-  .sm\:w-\[80px\] {
-    width: 80px;
   }
 
   .sm\:w-\[90px\] {
@@ -1617,28 +1589,12 @@ video {
 }
 
 @media (max-width: 420px) {
-  .mobile-1\:-right-12 {
-    right: -3rem;
-  }
-
-  .mobile-1\:-left-12 {
-    left: -3rem;
-  }
-
-  .mobile-1\:-left-10 {
-    left: -2.5rem;
-  }
-
-  .mobile-1\:-bottom-14 {
-    bottom: -3.5rem;
-  }
-
   .mobile-1\:-bottom-12 {
     bottom: -3rem;
   }
 
-  .mobile-1\:-bottom-10 {
-    bottom: -2.5rem;
+  .mobile-1\:-left-10 {
+    left: -2.5rem;
   }
 
   .mobile-1\:-right-10 {
@@ -1653,14 +1609,6 @@ video {
     height: 14px;
   }
 
-  .mobile-1\:h-\[32px\] {
-    height: 32px;
-  }
-
-  .mobile-1\:h-\[26px\] {
-    height: 26px;
-  }
-
   .mobile-1\:h-\[200px\] {
     height: 200px;
   }
@@ -1669,8 +1617,24 @@ video {
     height: 24px;
   }
 
+  .mobile-1\:h-\[26px\] {
+    height: 26px;
+  }
+
+  .mobile-1\:h-\[32px\] {
+    height: 32px;
+  }
+
   .mobile-1\:w-\[14px\] {
     width: 14px;
+  }
+
+  .mobile-1\:w-\[24px\] {
+    width: 24px;
+  }
+
+  .mobile-1\:w-\[26px\] {
+    width: 26px;
   }
 
   .mobile-1\:w-\[32px\] {
@@ -1683,14 +1647,6 @@ video {
 
   .mobile-1\:w-\[90\%\] {
     width: 90%;
-  }
-
-  .mobile-1\:w-\[26px\] {
-    width: 26px;
-  }
-
-  .mobile-1\:w-\[24px\] {
-    width: 24px;
   }
 
   .mobile-1\:flex-col {
@@ -1723,19 +1679,14 @@ video {
     line-height: 2.25rem;
   }
 
-  .mobile-1\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .mobile-1\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .mobile-1\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .mobile-1\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .mobile-1\:font-semibold {
