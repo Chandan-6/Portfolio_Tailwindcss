@@ -10,8 +10,19 @@ import skillInfo from "../../utils/skillInfo.js";
 import HireMe from "../components/sections/hireMe/HireMe.jsx";
 import GetInTouch from "../components/sections/getInTouch/GetInTouch.jsx";
 import Footer from "../components/footer/Footer.jsx";
+import { useEffect, useState } from "react";
+import Loader from "../components/loader/Loader.jsx";
 
 export default function Home() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
+
   return (
     <div className="scroll-smooth">
       <Navbar />
@@ -97,6 +108,11 @@ export default function Home() {
       <GetInTouch />
 
       <Footer />
+
+      {
+        loading && <Loader/>
+      }
+      
     </div>
   );
 }

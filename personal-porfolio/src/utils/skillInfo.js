@@ -4,6 +4,7 @@ import expressjs from "../assets/logos/expressjs.png";
 import nodejs from "../assets/logos/nodejs.png";
 import mysql from "../assets/logos/mysql.png";
 import redux from "../assets/logos/redux.png"
+import recoil from "../assets/logos/recoil.png"
 import c from "../assets/logos/c.png";
 import cpp from "../assets/logos/cpp.png";
 import git from "../assets/logos/git.png";
@@ -64,6 +65,12 @@ const skillInfo = [
         imgLink : redux,
         name : "redux logo",
         skill : 'Redux',
+    },
+    {
+        id : 15,
+        imgLink : recoil,
+        name : "recoil logo",
+        skill : 'Recoil',
     },
     {
         id : 9,
