@@ -7,6 +7,8 @@ import Work from "../components/cards/work/Work.jsx";
 import workInfo from "../../utils/workInfo.js";
 import Skill from "../components/cards/skill/Skill.jsx";
 import skillInfo from "../../utils/skillInfo.js";
+import Experience from "../components/sections/experience/Experience.jsx";
+import experienceInfo from "../../utils/experienceInfo.js";
 import HireMe from "../components/sections/hireMe/HireMe.jsx";
 import GetInTouch from "../components/sections/getInTouch/GetInTouch.jsx";
 import Footer from "../components/footer/Footer.jsx";
@@ -14,7 +16,6 @@ import { useEffect, useState } from "react";
 import Loader from "../components/loader/Loader.jsx";
 
 export default function Home() {
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -33,7 +34,11 @@ export default function Home() {
 
       {/* Quality Section */}
       <div className="quality mb-16 mt-16" id="Quality">
-        <p  data-aos="zoom-in-up" data-aos-delay="200" className="font-semibold text-center text-white text-6xl tracking-wide mb-16 tablet:text-5xl mobile-1:text-3xl drop-shadow-lg mobile-2:mx-2">
+        <p
+          data-aos="zoom-in-up"
+          data-aos-delay="200"
+          className="font-semibold text-center text-white text-6xl tracking-wide mb-16 tablet:text-5xl mobile-1:text-3xl drop-shadow-lg mobile-2:mx-2"
+        >
           <span className="qualityText_span animate___animated animate-bounce animate-infinite">
             Quality{" "}
           </span>{" "}
@@ -55,10 +60,43 @@ export default function Home() {
 
       <Line />
 
+      {/* Experience Section */}
+      <div className="work_main_container mx-16 my-16" id="Experience">
+        <p
+          data-aos="zoom-in-up"
+          data-aos-delay="200"
+          className="font-semibold text-center text-white text-6xl tracking-wide my-16 tablet:text-5xl mobile-1:text-3xl drop-shadow-lg"
+        >
+          Experience
+        </p>
+        <div className="flex justify-center items-center gap-12 flex-wrap">
+          {experienceInfo.map((item) => (
+            <Experience
+            key={item.id}
+            imgLink={item.imgLink}
+            company={item.company}
+            jobType={item.jobType}
+            role={item.role}
+            timePeriod={item.timePeriod}
+            dates={item.dates}
+          />
+          ))}
+        </div>
+
+
+      </div>
+      {/* End of Experience section  */}
+
+      <Line />
+
       {/* Work Section */}
 
       <div className="work_main_container mx-16 my-16" id="Works">
-        <p  data-aos="zoom-in-up" data-aos-delay="200" className="font-semibold text-center text-white text-6xl tracking-wide my-16 tablet:text-5xl mobile-1:text-3xl drop-shadow-lg">
+        <p
+          data-aos="zoom-in-up"
+          data-aos-delay="200"
+          className="font-semibold text-center text-white text-6xl tracking-wide my-16 tablet:text-5xl mobile-1:text-3xl drop-shadow-lg"
+        >
           My Creative Work Section
         </p>
 
@@ -83,13 +121,17 @@ export default function Home() {
       {/* Skill Section */}
 
       <div className="skill_main_container mx-16 my-16" id="Skills">
-        <p  data-aos="zoom-in-up" data-aos-delay="200" className="font-semibold text-center text-white text-6xl tracking-wide my-14 tablet:text-5xl mobile-1:text-3xl drop-shadow-lg">
+        <p
+          data-aos="zoom-in-up"
+          data-aos-delay="200"
+          className="font-semibold text-center text-white text-6xl tracking-wide my-14 tablet:text-5xl mobile-1:text-3xl drop-shadow-lg"
+        >
           Skills
         </p>
 
         <div className="flex justify-center items-center gap-12 flex-wrap">
           {skillInfo.map((item) => (
-          <Skill
+            <Skill
               key={item.id}
               imgLink={item.imgLink}
               name={item.name}
@@ -109,10 +151,7 @@ export default function Home() {
 
       <Footer />
 
-      {
-        loading && <Loader/>
-      }
-      
+      {loading && <Loader />}
     </div>
   );
 }
